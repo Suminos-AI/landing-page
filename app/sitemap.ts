@@ -3,6 +3,8 @@ import { getArticles } from 'app/articles/utils'
 
 export const baseUrl = 'https://portfolio-blog-starter.vercel.app'
 
+export const dynamic = 'force-static'
+
 export default async function sitemap() {
   let news = getNewsPosts().map((post) => ({
     url: `${baseUrl}/news/${post.slug}`,

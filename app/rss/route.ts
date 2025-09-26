@@ -2,6 +2,8 @@ import { baseUrl } from 'app/sitemap'
 import { getNewsPosts } from 'app/news/utils'
 import { getArticles } from 'app/articles/utils'
 
+export const dynamic = 'force-static'
+
 export async function GET() {
   let allNews = await getNewsPosts()
   let allArticles = await getArticles()
