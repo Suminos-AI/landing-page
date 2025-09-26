@@ -52,12 +52,12 @@ export default function Page() {
 
       {/* How It Works Section */}
       <GeneralSection id="how-it-works" stagger>
-        <div className="text-center">
+        <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-            Everything you need to land your dream job
+            Land Your Dream Job with Confidence
           </h2>
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
-            Our AI-powered platform streamlines every step of your job search journey
+            AI that enhances your resume, finds better opportunities, and preps you for interviews — so you get hired for the right role, not just any role.
           </p>
         </div>
         

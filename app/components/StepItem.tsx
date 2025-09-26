@@ -23,13 +23,15 @@ export function StepItem({
   return (
     <StaggerItem>
       <div className="relative">
-        <div className="flex items-start">
-          <StepNumber number={number} />
-          <StepContent 
-            title={title}
-            description={description}
-            features={features}
-          />
+        <div className="flex flex-col lg:flex-row items-center lg:items-start w-full">
+          <div className="flex items-center lg:items-start w-full max-w-[600px] lg:w-[600px]">
+            <StepNumber number={number} />
+            <StepContent 
+              title={title}
+              description={description}
+              features={features}
+            />
+          </div>
           <StepIllustration 
             icon={icon}
             label={illustrationLabel}

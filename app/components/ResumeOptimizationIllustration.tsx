@@ -27,7 +27,7 @@ export function ResumeOptimizationIllustration({ className = '' }: ResumeOptimiz
   ];
 
   return (
-    <div className={`w-full min-h-96  rounded-2xl flex items-center justify-center relative overflow-visible ${className}`}>
+    <div className={`w-full rounded-2xl flex items-center justify-center relative overflow-visible pb-0 ${className}`}>
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center w-full">
           {/* Single Resume with AI Suggestions */}
@@ -322,20 +322,17 @@ export function ResumeOptimizationIllustration({ className = '' }: ResumeOptimiz
                 <motion.div
                   className="absolute z-20 px-4 py-3 rounded-full text-sm font-semibold shadow-xl backdrop-blur-sm border border-slate-200/40 dark:border-slate-300/40 block sm:hidden max-w-xs bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-blue-200 dark:via-indigo-200 dark:to-purple-200"
                   initial={{
-                    top: "100%",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    marginTop: "12px",
+                    top: suggestions[currentStep - 1].position.top,
+                    right: suggestions[currentStep - 1].position.right,
                     opacity: currentStep === 1 ? 0 : 1,
                     scale: currentStep === 1 ? 0 : 1
                   }}
                   animate={{
-                    top: "100%",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    marginTop: "12px",
+                    top: suggestions[currentStep - 1].position.top,
+                    right: suggestions[currentStep - 1].position.right,
                     opacity: 1,
-                    scale: 1
+                    scale: [1, 1.02, 1],
+                    y: [0, -2, 0]
                   }}
                   transition={{ 
                     duration: currentStep === 1 ? 0.4 : 0.6,

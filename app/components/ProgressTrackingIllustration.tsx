@@ -75,7 +75,7 @@ export function ProgressTrackingIllustration({ className = '' }: ProgressTrackin
   const progressPercentage = (completedApplications / totalApplications) * 100;
 
   return (
-    <div className={`w-full min-h-96 rounded-2xl flex items-center justify-center relative overflow-visible ${className}`}>
+    <div className={`w-full rounded-2xl flex items-center justify-center relative overflow-visible ${className}`}>
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center w-full">
           {/* Dashboard */}
