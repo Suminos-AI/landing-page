@@ -1,10 +1,13 @@
 import { baseUrl } from 'app/sitemap'
-import { getBlogPosts } from 'app/blog/utils'
+import { getNewsPosts } from 'app/news/utils'
+import { getArticles } from 'app/articles/utils'
 
 export async function GET() {
-  let allBlogs = await getBlogPosts()
+  let allNews = await getNewsPosts()
+  let allArticles = await getArticles()
+  let allPosts = [...allNews, ...allArticles]
 
-  const itemsXml = allBlogs
+  const itemsXml = allPosts
     .sort((a, b) => {
       if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
         return -1
@@ -12,24 +15,27 @@ export async function GET() {
       return 1
     })
     .map(
-      (post) =>
-        `<item>
+      (post) => {
+        const isNews = allNews.includes(post)
+        const link = isNews ? `${baseUrl}/news/${post.slug}` : `${baseUrl}/articles/${post.slug}`
+        return `<item>
           <title>${post.metadata.title}</title>
-          <link>${baseUrl}/blog/${post.slug}</link>
+          <link>${link}</link>
           <description>${post.metadata.summary || ''}</description>
           <pubDate>${new Date(
             post.metadata.publishedAt
           ).toUTCString()}</pubDate>
         </item>`
+      }
     )
     .join('\n')
 
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">
     <channel>
-        <title>My Portfolio</title>
+        <title>Suminos - News & Articles</title>
         <link>${baseUrl}</link>
-        <description>This is my portfolio RSS feed</description>
+        <description>Latest news and career articles from Suminos</description>
         ${itemsXml}
     </channel>
   </rss>`

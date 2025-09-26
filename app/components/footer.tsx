@@ -1,61 +1,47 @@
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  )
-}
+import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="/rss"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/vercel/next.js"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
-          </a>
-        </li>
-      </ul>
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-        © {new Date().getFullYear()} MIT Licensed
-      </p>
+    <footer className="bg-slate-900 dark:bg-slate-950 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col md:flex-row justify-between gap-8">
+          <div className="flex-1 max-w-md">
+            <div className="flex items-center space-x-2 mb-4">
+              <img
+                src="/images/logo-dark.png"
+                alt="Suminos Logo"
+                className="h-8"
+              />
+            </div>
+            <p className="text-slate-400 mb-6">
+              Your AI-powered job hunting companion. Refine your resume, discover opportunities, 
+              apply smarter, and prepare with confidence.
+            </p>
+            
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Status</a></li>
+              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Community</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-slate-400 text-sm">
+            © {new Date().getFullYear()} StoneFrontier LLC. All rights reserved.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
     </footer>
   )
 }

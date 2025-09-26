@@ -1,40 +1,70 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
-const navItems = {
-  '/': {
-    name: 'home',
-  },
-  '/blog': {
-    name: 'blog',
-  },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
-  },
+const navItems: Record<string, { name: string }> = {
+  // '/news': {
+  //   name: 'News',
+  // }
 }
 
 export function Navbar() {
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
-      <div className="lg:sticky lg:top-20">
-        <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-          id="nav"
-        >
-          <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
-                <Link
-                  key={path}
-                  href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
-                >
-                  {name}
-                </Link>
-              )
-            })}
+    <nav className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <img
+                src="/images/logo.png"
+                alt="Suminos Logo"
+                className="h-6"
+              />
+            </Link>
           </div>
-        </nav>
+          
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {Object.entries(navItems).map(([path, { name }]) => {
+                return (
+                  <Link
+                    key={path}
+                    href={path}
+                    className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  >
+                    {name}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+          
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center space-x-4">
+              <Link
+                href="#features"
+                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="#features"
+                className="btn-primary text-sm px-4 py-2"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white p-2">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-    </aside>
+    </nav>
   )
 }

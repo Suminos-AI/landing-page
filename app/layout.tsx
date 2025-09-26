@@ -11,15 +11,15 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Suminos - Your AI-Powered Job Hunting Companion',
+    template: '%s | Suminos',
   },
-  description: 'This is my portfolio.',
+  description: 'Refine your resume, discover opportunities, apply smarter, and prepare with confidence. The complete AI-powered job hunting platform.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Suminos - Your AI-Powered Job Hunting Companion',
+    description: 'Refine your resume, discover opportunities, apply smarter, and prepare with confidence. The complete AI-powered job hunting platform.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Suminos',
     locale: 'en_US',
     type: 'website',
   },
@@ -52,8 +52,8 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="antialiased">
+        <main className="min-h-screen">
           <Navbar />
           {children}
           <Footer />
