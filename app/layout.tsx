@@ -15,6 +15,15 @@ export const metadata: Metadata = {
     template: '%s | Suminos',
   },
   description: 'Refine your resume, discover opportunities, apply smarter, and prepare with confidence. The complete AI-powered job hunting platform.',
+  icons: {
+    icon: [
+      { url: '/images/icon.ico', sizes: 'any' },
+      { url: '/images/icon-120.png', sizes: '120x120', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/icon-120.png', sizes: '120x120', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Suminos - Your AI-Powered Job Hunting Companion',
     description: 'Refine your resume, discover opportunities, apply smarter, and prepare with confidence. The complete AI-powered job hunting platform.',
