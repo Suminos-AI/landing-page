@@ -25,7 +25,7 @@ export default function Page() {
             </div>
             
             {/* Value Badges */}
-            <div className="flex flex-wrap gap-8 pt-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 pt-6 justify-center items-center">
               <div className="flex items-center gap-3 px-4 py-2 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full border border-slate-200/80 dark:border-slate-600/60 shadow-sm hover:shadow-md transition-all duration-200">
                 <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-600 flex items-center justify-center">
                   <Edit3 className="w-4 h-4 text-slate-600 dark:text-slate-200" />
