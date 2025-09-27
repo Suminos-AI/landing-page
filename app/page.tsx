@@ -20,7 +20,7 @@ export default function Page() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-primary text-lg px-8 py-4 flex items-center justify-center gap-2">
-                Get My Resume Optimized
+                Optimize My Resume
               </button>
             </div>
             
@@ -70,8 +70,8 @@ export default function Page() {
             <StepItem
               number={1}
               title="Smart Resume Optimization"
-              description="Transform your resume with AI-powered analysis that makes it ATS-friendly, highlights your top achievements, and shows exactly how to stand out. Upload your existing resume or create a polished one in minutes."
-              features={["ATS Optimization", "Achievement Highlighting", "Intelligent Resume Builder"]}
+              description="Transform your resume with AI-powered analysis that makes it recruiter-friendly, highlights your top achievements, and shows exactly how to stand out. Upload your existing resume or create a polished one in minutes."
+              features={["Recruiter-Friendly Format", "Achievement Highlighting", "Intelligent Resume Builder"]}
               icon={
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -84,7 +84,7 @@ export default function Page() {
             <StepItem
               number={2}
               title="Job Application Companion"
-              description="Stop filling out endless forms. Our AI assistant helps you auto-fill applications, tailor answers for each role, and submit with confidence — saving you hours every week."
+              description="Stop filling out endless forms. Our AI assistant helps you auto-fill applications, tailor answers for each role, and submit with confidence — expanding your reach to more opportunities."
               features={["Auto-Fill Applications", "Tailored Answers per Role", "Effortless Submissions"]}
               icon={
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +163,7 @@ export default function Page() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <button className="btn-primary text-lg px-8 py-4">
-              Get My Resume Optimized
+              Optimize My Resume
             </button>
           </div>
         </div>
