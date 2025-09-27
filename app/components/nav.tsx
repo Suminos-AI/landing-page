@@ -17,7 +17,12 @@ export function Navbar() {
               <img
                 src="/images/logo.png"
                 alt="Suminos Logo"
-                className="h-6"
+                className="h-6 dark:hidden"
+              />
+              <img
+                src="/images/logo-dark.png"
+                alt="Suminos Logo"
+                className="h-6 hidden dark:block"
               />
             </Link>
           </div>
