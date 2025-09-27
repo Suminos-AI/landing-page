@@ -11,7 +11,7 @@ export default function Page() {
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
-                Get Hired Faster — <span className="bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">With AI + Expert Guidance</span>
+                Get Hired Faster — <span className="bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-300 bg-clip-text text-transparent">With AI + Expert Guidance</span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300 sm:text-xl">
                 Skip the stress of endless edits and scattered applications. We'll polish your resume, match you to the right roles, and coach you for interviews — so you feel confident every step of the way.
@@ -26,23 +26,23 @@ export default function Page() {
             
             {/* Value Badges */}
             <div className="flex flex-wrap gap-8 pt-6 justify-center">
-              <div className="flex items-center gap-3 px-4 py-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full border border-slate-200/60 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all duration-200">
-                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
-                  <Edit3 className="w-4 h-4 text-slate-600 dark:text-slate-300" />
+              <div className="flex items-center gap-3 px-4 py-2 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full border border-slate-200/80 dark:border-slate-600/60 shadow-sm hover:shadow-md transition-all duration-200">
+                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-600 flex items-center justify-center">
+                  <Edit3 className="w-4 h-4 text-slate-600 dark:text-slate-200" />
                 </div>
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">AI Resume Polish</span>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-200">AI Resume Polish</span>
               </div>
-              <div className="flex items-center gap-3 px-4 py-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full border border-slate-200/60 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all duration-200">
-                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
-                  <Search className="w-4 h-4 text-slate-600 dark:text-slate-300" />
+              <div className="flex items-center gap-3 px-4 py-2 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full border border-slate-200/80 dark:border-slate-600/60 shadow-sm hover:shadow-md transition-all duration-200">
+                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-600 flex items-center justify-center">
+                  <Search className="w-4 h-4 text-slate-600 dark:text-slate-200" />
                 </div>
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Smart Job Search</span>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Smart Job Search</span>
               </div>
-              <div className="flex items-center gap-3 px-4 py-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full border border-slate-200/60 dark:border-slate-700/60 shadow-sm hover:shadow-md transition-all duration-200">
-                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
-                  <MessageCircle className="w-4 h-4 text-slate-600 dark:text-slate-300" />
+              <div className="flex items-center gap-3 px-4 py-2 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full border border-slate-200/80 dark:border-slate-600/60 shadow-sm hover:shadow-md transition-all duration-200">
+                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-600 flex items-center justify-center">
+                  <MessageCircle className="w-4 h-4 text-slate-600 dark:text-slate-200" />
                 </div>
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Interview Prep</span>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Interview Prep</span>
               </div>
             </div>
           </div>
