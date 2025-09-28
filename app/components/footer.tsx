@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 
 export default function Footer() {
@@ -23,10 +25,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Status</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Community</a></li>
+              <li><a href="mailto:contact@suminos.ai" className="text-slate-400 hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -36,9 +35,8 @@ export default function Footer() {
             © {new Date().getFullYear()} StoneFrontier LLC. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+            <a href="/legal/privacy-policy" className="text-slate-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            <a href="/legal/terms-of-service" className="text-slate-400 hover:text-white text-sm transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
