@@ -11,7 +11,7 @@ export default function TermsOfService() {
             </h1>
             
             <p className="text-slate-600 dark:text-slate-300 mb-8">
-              <strong>Last Updated:</strong> December 2024
+              <strong>Last Updated:</strong> September 29, 2025
             </p>
 
             <div className="space-y-8">
