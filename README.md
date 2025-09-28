@@ -1,42 +1,65 @@
-# Portfolio Blog Starter
+# Suminos - AI-Powered Job Hunting Companion
 
-This is a porfolio site template complete with a blog. Includes:
+Suminos is your AI-powered job hunting companion that helps you refine your resume, discover opportunities, apply smarter, and prepare with confidence.
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+## Features
 
-## Demo
+- **Resume Optimization**: AI-powered resume refinement and optimization
+- **Job Discovery**: Smart job matching and opportunity discovery
+- **Interview Preparation**: Comprehensive interview prep tools and resources
+- **Application Tracking**: Streamlined job application management
+- **Technical Blog**: Expert insights on job hunting, interviews, and career development
 
-https://portfolio-blog-starter.vercel.app
+## Tech Stack
 
-## How to Use
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS v4
+- **Content**: MDX and Markdown support
+- **SEO**: Optimized with sitemap, robots, JSON-LD schema
+- **Analytics**: Vercel Speed Insights / Web Analytics
+- **Font**: Geist font
+- **Deployment**: Vercel
 
-You can choose from one of the following two methods to use this repository:
+## Getting Started
 
-### One-Click Deploy
+### Prerequisites
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+- Node.js 18+
+- pnpm (recommended) or npm
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
+### Installation
 
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+1. Clone the repository:
 
 ```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
+git clone <repository-url>
+cd blog
 ```
 
-Then, run Next.js in development mode:
+2. Install dependencies:
+
+```bash
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 pnpm dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Deployment
+
+Deploy to Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=<your-repo-url>&project-name=suminos&repository-name=suminos)
+
+## Contact
+
+For questions or support, contact us at [contact@suminos.ai](mailto:contact@suminos.ai)
+
+## License
+
+© 2024 StoneFrontier LLC. All rights reserved.
