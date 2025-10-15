@@ -19,9 +19,9 @@ export default function Page() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary text-lg px-8 py-4 flex items-center justify-center gap-2">
+              <a href="https://app.suminos.ai" className="btn-primary text-lg px-8 py-4 flex items-center justify-center gap-2">
                 Optimize My Resume
-              </button>
+              </a>
             </div>
             
             {/* Value Badges */}
@@ -162,9 +162,9 @@ export default function Page() {
             Join 10,000+ job seekers who've optimized their resumes and landed interviews 3x faster with our AI platform.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <button className="btn-primary text-lg px-8 py-4">
+            <a href="https://app.suminos.ai" className="btn-primary text-lg px-8 py-4">
               Optimize My Resume
-            </button>
+            </a>
           </div>
         </div>
       </GeneralSection>

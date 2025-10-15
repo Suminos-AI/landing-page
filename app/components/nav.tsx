@@ -59,18 +59,18 @@ export function Navbar() {
           
           <div className="hidden md:block">
             <div className="ml-4 flex items-center space-x-4">
-              <Link
-                href="#features"
+              <a
+                href="https://app.suminos.ai"
                 className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Sign In
-              </Link>
-              <Link
-                href="#features"
+              </a>
+              <a
+                href="https://app.suminos.ai"
                 className="btn-primary text-sm px-4 py-2"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </div>
           
@@ -124,20 +124,20 @@ export function Navbar() {
                 
                 {/* Auth buttons */}
                 <div className="pt-4 pb-2 border-t border-slate-200 dark:border-slate-700">
-                  <Link
-                    href="#features"
+                  <a
+                    href="https://app.suminos.ai"
                     onClick={closeMobileMenu}
                     className="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
                   >
                     Sign In
-                  </Link>
-                  <Link
-                    href="#features"
+                  </a>
+                  <a
+                    href="https://app.suminos.ai"
                     onClick={closeMobileMenu}
                     className="block mt-2 mx-3 btn-primary text-sm px-4 py-2 text-center"
                   >
                     Get Started
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.div>
