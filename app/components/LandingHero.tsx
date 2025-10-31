@@ -40,7 +40,7 @@ export function LandingHero({ headline, subheadline, ctaText, onCtaClick }: Land
         </p>
         <button
           onClick={handleCtaClick}
-          className="rounded-lg border-none bg-[#0060F3] px-10 py-4 text-base text-white font-medium transition-all duration-300 animate-fade-in-up-delay-2 hover:bg-[#1d4ed8] hover:translate-y-[-2px] hover:shadow-[0_10px_25px_rgba(37,99,235,0.2)]"
+          className="rounded-lg border-none cursor-pointer bg-[#0060F3] px-10 py-4 text-base text-white font-medium transition-all duration-300 animate-fade-in-up-delay-2 hover:bg-[#1d4ed8] hover:translate-y-[-2px] hover:shadow-[0_10px_25px_rgba(37,99,235,0.2)]"
         >
           {ctaText}
         </button>

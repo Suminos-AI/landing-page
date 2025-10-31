@@ -83,8 +83,11 @@ export default function Page() {
             Let's figure out <br /> your next move together
           </>
         }
-        subheadline="The AI that helps you see what’s next — when old paths no longer lead anywhere."
+        subheadline="The AI that helps you see what's next — when old paths no longer lead anywhere."
         ctaText="Find my next path"
+        onCtaClick={() => {
+          window.open('https://app.suminos.ai', '_blank');
+        }}
       />
 
       <section className="features px-[60px] pt-[100px] max-md:px-[30px] flex flex-col gap-[120px]">
