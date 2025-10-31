@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 export const dynamic = 'force-static'
 
 export function GET() {
-  let title = 'Get Hired Faster — With AI + Expert Guidance'
+  let title = 'Get Hired Faster — With AI-Powered Tools'
 
   return new ImageResponse(
     (

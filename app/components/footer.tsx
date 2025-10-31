@@ -1,43 +1,16 @@
 'use client'
 
-import Image from 'next/image'
-
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col md:flex-row justify-between gap-8">
-          <div className="flex-1 max-w-md">
-            <div className="flex items-center space-x-2 mb-4">
-              <img
-                src="/images/logo-dark.png"
-                alt="Suminos Logo"
-                className="h-8"
-              />
-            </div>
-            <p className="text-slate-400 mb-6">
-              Your AI-powered job hunting companion. Refine your resume, discover opportunities, 
-              apply smarter, and prepare with confidence.
-            </p>
-            
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li><a href="mailto:contact@suminos.ai" className="text-slate-400 hover:text-white transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-400 text-sm">
-            © {new Date().getFullYear()} StoneFrontier LLC. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="/legal/privacy-policy" className="text-slate-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="/legal/terms-of-service" className="text-slate-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-          </div>
+    <footer className="w-full h-[100px] border-t border-gray-100 bg-[#fafafa] text-gray-500 dark:border-gray-800 dark:bg-[#0D1117] dark:text-gray-400 flex items-center font-['Roboto Mono',monospace] transition-colors duration-700" style={{ paddingTop: '20px', paddingBottom: '20px', paddingLeft: '50px', paddingRight: '50px' }}>
+      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 text-[14px] leading-relaxed">
+        <p className="text-left">
+          © {new Date().getFullYear()} <span className="text-gray-900 dark:text-white font-medium">Suminos</span>. Empowering your career journey with AI.
+        </p>
+        <div className="flex gap-10 md:gap-12">
+          <a href="/legal/privacy-policy" className="relative hover:text-gray-900 dark:hover:text-white transition-colors after:content-[''] after:absolute after:-bottom-[3px] after:left-0 after:w-0 after:h-[1px] after:bg-[#0060F3] hover:after:w-full after:transition-all after:duration-500 after:ease-out">Privacy Policy</a>
+          <a href="/legal/terms-of-service" className="relative hover:text-gray-900 dark:hover:text-white transition-colors after:content-[''] after:absolute after:-bottom-[3px] after:left-0 after:w-0 after:h-[1px] after:bg-[#0060F3] hover:after:w-full after:transition-all after:duration-500 after:ease-out">Terms of Service</a>
+          <a href="mailto:contact@suminos.ai" className="relative hover:text-gray-900 dark:hover:text-white transition-colors after:content-[''] after:absolute after:-bottom-[3px] after:left-0 after:w-0 after:h-[1px] after:bg-[#0060F3] hover:after:w-full after:transition-all after:duration-500 after:ease-out">Contact Us</a>
         </div>
       </div>
     </footer>
