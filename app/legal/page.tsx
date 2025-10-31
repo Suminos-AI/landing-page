@@ -26,7 +26,10 @@ export default function LegalPage() {
 
   if (legalDocuments.length === 0) {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
+      <div 
+        className="min-h-screen bg-slate-50 dark:bg-slate-900"
+        style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
@@ -42,7 +45,10 @@ export default function LegalPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
+    <div 
+      className="min-h-screen bg-slate-50 dark:bg-slate-900"
+      style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">

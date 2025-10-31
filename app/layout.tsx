@@ -1,8 +1,16 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import NavOnNonHome from './components/NavOnNonHome'
+import { Inter, Roboto_Mono } from 'next/font/google'
+import { LandingHeader } from './components/LandingHeader'
+import { DEFAULT_FONT } from './font-config'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const robotoMono = Roboto_Mono({ subsets: ['latin'], variable: '--font-roboto-mono' })
+
+// Determine which font to use as default based on config
+const defaultFont = DEFAULT_FONT === 'roboto-mono' ? robotoMono : inter
+const defaultFontVariable = DEFAULT_FONT === 'roboto-mono' ? '--font-roboto-mono' : '--font-inter'
+const defaultFontFamily = DEFAULT_FONT === 'roboto-mono' ? "'Roboto Mono', monospace" : "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
@@ -57,15 +65,16 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
-        GeistSans.variable,
-        GeistMono.variable
+        'text-black dark:text-white dark:bg-black',
+        inter.variable,
+        robotoMono.variable
       )}
+      style={{ backgroundColor: '#FBFAFB' }}
     >
-      <body className="antialiased">
+      <body className="antialiased" style={{ fontFamily: `var(${defaultFontVariable}), ${defaultFontFamily}`, backgroundColor: '#FBFAFB' }}>
         <PostHogProvider>
-          <main className="min-h-screen">
-            <NavOnNonHome />
+          <main className="min-h-screen" style={{ backgroundColor: '#FBFAFB' }}>
+            <LandingHeader />
             {children}
             <Footer />
             <Analytics />

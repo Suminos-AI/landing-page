@@ -67,12 +67,18 @@ export default async function LegalDocumentPage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
+    <div 
+      className="min-h-screen bg-slate-50 dark:bg-slate-900"
+      style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <article className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden">
           <div className="px-8 pb-8">
             {/* Content */}
-            <div className="prose prose-slate dark:prose-invert max-w-none">
+            <div 
+              className="prose prose-slate dark:prose-invert max-w-none"
+              style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+            >
               <CustomMDX source={legalDocument.content} />
             </div>
           </div>
