@@ -22,7 +22,14 @@ export function LandingHero({ headline, subheadline, ctaText, onCtaClick }: Land
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-10 pb-20 pt-[120px] before:absolute before:bottom-[-50%] before:left-[-10%] before:h-full before:w-[80%] before:rounded-full before:bg-gradient-to-br before:from-[rgba(59,130,246,0.03)] before:to-transparent before:animate-float-hero after:absolute after:top-[-30%] after:right-[-10%] after:h-[80%] after:w-[70%] after:rounded-full after:bg-gradient-to-bl after:from-[rgba(147,197,253,0.03)] after:to-transparent after:animate-float-hero-reverse" style={{ backgroundColor: '#FBFAFB' }}>
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <Threads amplitude={4.8} distance={1.8} enableMouseInteraction={true} style={{ opacity: 0.3 }} />
+        <Threads 
+          color={[0.2, 0.4, 1.0]} 
+          color2={[0.5, 0.0, 0.8]} 
+          amplitude={3.8} 
+          distance={1.2} 
+          enableMouseInteraction={true} 
+          style={{ opacity: 0.4 }} 
+        />
       </div>
       <div className="relative z-10 max-w-[1000px] text-center">
         <h1 className="mb-8 text-[76px] leading-[101px] tracking-[-1.72px] letter-spacing-[-0.2em] text-black font-normal animate-fade-in-up max-md:text-5xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>

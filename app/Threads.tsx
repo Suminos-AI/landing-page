@@ -20,6 +20,7 @@ precision highp float;
 uniform float iTime;
 uniform vec3 iResolution;
 uniform vec3 uColor;
+uniform vec3 uColor2;
 uniform float uAmplitude;
 uniform float uDistance;
 uniform vec2 uMouse;
@@ -113,7 +114,22 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     }
 
     float colorVal = 1.0 - line_strength;
-    fragColor = vec4(uColor * colorVal, colorVal);
+    
+    // Create wave-like gradient using sin waves and Perlin noise
+    // Combine multiple wave frequencies for organic flowing pattern
+    float wave1 = sin(uv.y * PI * 2.0 + iTime * 0.5) * 0.5 + 0.5;
+    float wave2 = sin(uv.x * PI * 1.5 + uv.y * PI * 2.5 + iTime * 0.3) * 0.5 + 0.5;
+    float noise = Perlin2D(vec2(uv.x * 2.0, uv.y * 2.0 + iTime * 0.2)) * 0.5 + 0.5;
+    
+    // Combine waves with noise for organic gradient factor
+    float gradientFactor = (wave1 * 0.4 + wave2 * 0.3 + noise * 0.3);
+    gradientFactor = smoothstep(0.0, 1.0, gradientFactor); // Smooth the transition
+    
+    // Mix colors based on wave pattern - creates flowing blue/purple waves
+    vec3 gradientColor = mix(uColor2, uColor, gradientFactor);
+    
+    // Keep full color saturation - only use alpha to control visibility
+    fragColor = vec4(gradientColor, colorVal);
 }
 
 void main() {
@@ -123,13 +139,14 @@ void main() {
 
 type ThreadsProps = {
   color?: [number, number, number]
+  color2?: [number, number, number]
   amplitude?: number
   distance?: number
   enableMouseInteraction?: boolean
   [key: string]: any
 }
 
-const Threads = ({ color = [1, 1, 1], amplitude = 1, distance = 0, enableMouseInteraction = false, ...rest }: ThreadsProps) => {
+const Threads = ({ color = [1, 1, 1], color2 = [0.5, 0.0, 0.8], amplitude = 1, distance = 0, enableMouseInteraction = false, ...rest }: ThreadsProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const animationFrameId = useRef<number | null>(null)
 
@@ -152,6 +169,7 @@ const Threads = ({ color = [1, 1, 1], amplitude = 1, distance = 0, enableMouseIn
         iTime: { value: 0 },
         iResolution: { value: new Color(gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height) },
         uColor: { value: new Color(...color) },
+        uColor2: { value: new Color(...color2) },
         uAmplitude: { value: amplitude },
         uDistance: { value: distance },
         uMouse: { value: new Float32Array([0.5, 0.5]) },
@@ -218,7 +236,7 @@ const Threads = ({ color = [1, 1, 1], amplitude = 1, distance = 0, enableMouseIn
       if (container.contains(gl.canvas)) container.removeChild(gl.canvas)
       gl.getExtension('WEBGL_lose_context')?.loseContext()
     }
-  }, [color, amplitude, distance, enableMouseInteraction])
+    }, [color, color2, amplitude, distance, enableMouseInteraction])
 
   return <div ref={containerRef} className="threads-container" {...rest} />
 }
