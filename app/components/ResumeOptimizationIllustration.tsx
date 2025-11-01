@@ -27,74 +27,18 @@ export function ResumeOptimizationIllustration({ className = '' }: ResumeOptimiz
   ];
 
   return (
-    <div className={`w-full rounded-2xl flex items-center justify-center relative overflow-visible pb-0 ${className}`}>
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div 
+      className={`w-full rounded-2xl flex items-center justify-center relative overflow-visible pb-0 ${className}`}
+      style={{ fontFamily: 'var(--font-inter), Inter, sans-serif' }}
+    >
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center w-full">
           {/* Single Resume with AI Suggestions */}
-          <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl">
-            {/* Header Container with Logo and Progress Bar */}
-            <div className="flex items-center space-x-3 w-full justify-center py-4">
-              {/* Company Logo with Playful Animation */}
-              <motion.div
-                className="relative w-8 h-8 flex-shrink-0"
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0],
-                  y: [0, -2, 0]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                {/* Glowing background effect */}
-                <motion.div
-                  className="absolute inset-0 bg-blue-500/20 rounded-full blur-sm"
-                  animate={{
-                    scale: [1, 1.3, 1],
-                    opacity: [0.3, 0.6, 0.3]
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-                <img 
-                  src="/images/icon-120.png" 
-                  alt="Company Logo" 
-                  className="w-full h-full object-contain relative z-10"
-                />
-                {/* Pulsing ring */}
-                <motion.div
-                  className="absolute inset-0 border-2 border-blue-400/40 rounded-full"
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.5, 0, 0.5]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </motion.div>
-
-              {/* Progress bar */}
-              <div className="w-24 sm:w-32 h-1.5 bg-slate-200 dark:bg-slate-600 rounded-full overflow-hidden flex-shrink-0">
-                <motion.div
-                  className="h-full bg-blue-500 rounded-full"
-                  initial={{ width: "0%" }}
-                  animate={{ width: `${((currentStep + 1) / 5) * 100}%` }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
-            </div>
+          <div className="relative w-full max-w-4xl">
 
             {/* Resume Container */}
             <motion.div 
-              className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl shadow-sm p-4 sm:p-6 border border-slate-300/60 dark:border-slate-700/30 relative overflow-visible w-full"
+              className="bg-slate-100 dark:bg-slate-800/80 rounded-xl p-3 sm:p-4 relative overflow-visible w-full shadow-lg"
               transition={{ duration: 0.5 }}
             >
               {/* Glowing edges when processing */}
@@ -105,7 +49,7 @@ export function ResumeOptimizationIllustration({ className = '' }: ResumeOptimiz
               />
 
               {/* Resume Content */}
-              <div className="space-y-4 relative z-10">
+              <div className="space-y-3 relative z-10">
                 {/* Header Section - Name and Contact */}
                 <div className="space-y-3 border-b border-slate-200 dark:border-slate-700 pb-4">
                   <motion.div 
@@ -269,7 +213,7 @@ export function ResumeOptimizationIllustration({ className = '' }: ResumeOptimiz
               {/* AI Suggestions - Single animated bubble */}
               {currentStep >= 1 && currentStep <= 4 && (
                 <motion.div
-                  className="absolute z-20 px-4 py-2 rounded-md font-light text-sm backdrop-blur-sm hidden sm:block max-w-xs bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-blue-200 dark:via-indigo-200 dark:to-purple-200 shadow-lg border border-slate-200/40 dark:border-slate-300/40"
+                  className="absolute z-20 px-4 py-2 rounded-md font-light text-xs tracking-wide backdrop-blur-sm hidden sm:block max-w-xs bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-blue-200 dark:via-indigo-200 dark:to-purple-200 shadow-lg border border-slate-200/40 dark:border-slate-300/40"
                   initial={{
                     top: suggestions[currentStep - 1].position.top,
                     right: suggestions[currentStep - 1].position.right,
@@ -289,7 +233,7 @@ export function ResumeOptimizationIllustration({ className = '' }: ResumeOptimiz
                   }}
                 >
                     <motion.div 
-                      className="flex items-center gap-3 w-52"
+                      className="flex items-center gap-3 w-56"
                       key={currentStep}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}

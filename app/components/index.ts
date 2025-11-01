@@ -10,6 +10,8 @@ export { StepItem } from './StepItem';
 export { ResumeOptimizationIllustration } from './ResumeOptimizationIllustration';
 export { JobApplicationIllustration } from './JobApplicationIllustration';
 export { ProgressTrackingIllustration } from './ProgressTrackingIllustration';
+export { InterviewMasteryIllustration } from './InterviewMasteryIllustration';
+export { SmartJobDiscoveryIllustration } from './SmartJobDiscoveryIllustration';
 
 // Other components
 export { default as Footer } from './footer';
@@ -24,3 +26,9 @@ export { NewsGrid } from './NewsGrid';
 // Article components
 export { ArticleCard } from './ArticleCard';
 export { ArticlesGrid } from './ArticlesGrid';
+
+// Landing page components
+export { LandingHeader } from './LandingHeader';
+export { LandingHero } from './LandingHero';
+export { LandingTag } from './LandingTag';
+export { LandingFeatureItem } from './LandingFeatureItem';
