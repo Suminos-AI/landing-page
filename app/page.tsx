@@ -84,7 +84,7 @@ export default function Page() {
           </>
         }
         subheadline="The AI that helps you see what's next — when old paths no longer lead anywhere."
-        ctaText="Find my next path"
+        ctaText="Start your journey"
         onCtaClick={() => {
           window.open('https://app.suminos.ai', '_blank');
         }}
