@@ -37,6 +37,9 @@ function parseFrontmatter(fileContent: string) {
 }
 
 function getMDXFiles(dir) {
+  if (!fs.existsSync(dir)) {
+    return []
+  }
   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx')
 }
 
@@ -46,6 +49,9 @@ function readMDXFile(filePath) {
 }
 
 function getMDXData(dir) {
+  if (!fs.existsSync(dir)) {
+    return []
+  }
   let mdxFiles = getMDXFiles(dir)
   return mdxFiles.map((file) => {
     let { metadata, content } = readMDXFile(path.join(dir, file))
