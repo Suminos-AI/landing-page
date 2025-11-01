@@ -5,8 +5,15 @@ import { baseUrl } from 'app/sitemap'
 import Link from 'next/link'
 import Image from 'next/image'
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   let articles = getArticles()
+
+  // Return empty array if no articles exist (required for static export)
+  if (articles.length === 0) {
+    return []
+  }
 
   return articles.map((article) => ({
     slug: article.slug,
