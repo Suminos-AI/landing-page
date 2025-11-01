@@ -16,7 +16,7 @@ export function ArticlesGrid() {
           return 1
         })
         .map((article) => (
-          <ArticleCard key={article.slug} article={article} />
+          <ArticleCard key={article.slug} article={article} basePath="/articles" />
         ))}
     </div>
   )

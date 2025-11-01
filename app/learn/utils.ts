@@ -1,15 +1,18 @@
 import fs from 'fs'
 import path from 'path'
+import { Category, FunnelStage } from './types'
 
 type Metadata = {
   title: string
   publishedAt: string
   summary: string
   image?: string
-  category?: string
+  category?: Category
   author?: string
   readTime?: string
   tags?: string[]
+  funnelStage?: FunnelStage
+  linkTarget?: string // e.g., '/resume-revision', 'https://app.suminos.ai'
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -59,8 +62,28 @@ function getMDXData(dir) {
   })
 }
 
-export function getArticles() {
-  return getMDXData(path.join(process.cwd(), 'app', 'articles', 'posts'))
+// Get all learn articles (from both /articles/posts and /learn/posts)
+export function getLearnArticles(): Array<{ metadata: Metadata; slug: string; content: string }> {
+  const articlesDir = path.join(process.cwd(), 'app', 'articles', 'posts')
+  const learnDir = path.join(process.cwd(), 'app', 'learn', 'posts')
+  
+  let articles: Array<{ metadata: Metadata; slug: string; content: string }> = []
+  
+  // Get articles from /articles/posts
+  if (fs.existsSync(articlesDir)) {
+    articles = [...articles, ...getMDXData(articlesDir)]
+  }
+  
+  // Get articles from /learn/posts if directory exists
+  if (fs.existsSync(learnDir)) {
+    articles = [...articles, ...getMDXData(learnDir)]
+  }
+  
+  return articles
+}
+
+export function getArticlesByCategory(category: Category): Array<{ metadata: Metadata; slug: string; content: string }> {
+  return getLearnArticles().filter(article => article.metadata.category === category)
 }
 
 // Re-export formatDate for backward compatibility with server components

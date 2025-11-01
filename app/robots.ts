@@ -7,6 +7,13 @@ export default function robots() {
     rules: [
       {
         userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/admin/'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/admin/'],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

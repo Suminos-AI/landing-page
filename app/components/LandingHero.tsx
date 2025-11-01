@@ -20,7 +20,7 @@ export function LandingHero({ headline, subheadline, ctaText, onCtaClick }: Land
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-10 pb-20 pt-[120px] before:absolute before:bottom-[-50%] before:left-[-10%] before:h-full before:w-[80%] before:rounded-full before:bg-gradient-to-br before:from-[rgba(59,130,246,0.03)] before:to-transparent before:animate-float-hero after:absolute after:top-[-30%] after:right-[-10%] after:h-[80%] after:w-[70%] after:rounded-full after:bg-gradient-to-bl after:from-[rgba(147,197,253,0.03)] after:to-transparent after:animate-float-hero-reverse" style={{ backgroundColor: '#FBFAFB' }}>
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-10 pb-20 before:absolute before:bottom-[-50%] before:left-[-10%] before:h-full before:w-[80%] before:rounded-full before:bg-gradient-to-br before:from-[rgba(59,130,246,0.03)] before:to-transparent before:animate-float-hero after:absolute after:top-[-30%] after:right-[-10%] after:h-[80%] after:w-[70%] after:rounded-full after:bg-gradient-to-bl after:from-[rgba(147,197,253,0.03)] after:to-transparent after:animate-float-hero-reverse" style={{ backgroundColor: '#FBFAFB' }}>
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Threads 
           color={[0.2, 0.4, 1.0]} 

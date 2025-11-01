@@ -1,14 +1,17 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { Inter, Roboto_Mono } from 'next/font/google'
+import { Inter, Roboto_Mono, Merriweather } from 'next/font/google'
 import { LandingHeader } from './components/LandingHeader'
 import { DEFAULT_FONT } from './font-config'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const robotoMono = Roboto_Mono({ subsets: ['latin'], variable: '--font-roboto-mono' })
+const merriweather = Merriweather({ 
+  subsets: ['latin'], 
+  variable: '--font-merriweather',
+  weight: ['300', '400', '700', '900']
+})
 
-// Determine which font to use as default based on config
-const defaultFont = DEFAULT_FONT === 'roboto-mono' ? robotoMono : inter
 const defaultFontVariable = DEFAULT_FONT === 'roboto-mono' ? '--font-roboto-mono' : '--font-inter'
 const defaultFontFamily = DEFAULT_FONT === 'roboto-mono' ? "'Roboto Mono', monospace" : "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 import { Analytics } from '@vercel/analytics/react'
@@ -24,6 +27,23 @@ export const metadata: Metadata = {
     template: '%s | Suminos',
   },
   description: 'Refine your resume, discover opportunities, apply smarter, and prepare with confidence. The complete AI-powered job hunting platform.',
+  keywords: [
+    'job hunting',
+    'resume optimization',
+    'AI resume',
+    'job search',
+    'career development',
+    'interview preparation',
+    'job application tracker',
+    'AI job matching',
+    'resume review',
+    'career advice',
+    'job opportunities',
+    'resume builder',
+  ],
+  authors: [{ name: 'Suminos Team' }],
+  creator: 'Suminos',
+  publisher: 'Suminos',
   icons: {
     icon: [
       { url: '/images/icon.ico', sizes: 'any' },
@@ -40,6 +60,21 @@ export const metadata: Metadata = {
     siteName: 'Suminos',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${baseUrl}/og?title=${encodeURIComponent('Suminos - Your AI-Powered Job Hunting Companion')}`,
+        width: 1200,
+        height: 630,
+        alt: 'Suminos - AI-Powered Job Hunting Companion',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Suminos - Your AI-Powered Job Hunting Companion',
+    description: 'Refine your resume, discover opportunities, apply smarter, and prepare with confidence.',
+    images: [`${baseUrl}/og?title=${encodeURIComponent('Suminos - Your AI-Powered Job Hunting Companion')}`],
+    creator: '@suminos',
   },
   robots: {
     index: true,
@@ -51,6 +86,9 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  alternates: {
+    canonical: baseUrl,
   },
 }
 
@@ -67,14 +105,15 @@ export default function RootLayout({
       className={cx(
         'text-black dark:text-white dark:bg-black',
         inter.variable,
-        robotoMono.variable
+        robotoMono.variable,
+        merriweather.variable
       )}
       style={{ backgroundColor: '#FBFAFB' }}
     >
       <body className="antialiased" style={{ fontFamily: `var(${defaultFontVariable}), ${defaultFontFamily}`, backgroundColor: '#FBFAFB' }}>
         <PostHogProvider>
-          <main className="min-h-screen" style={{ backgroundColor: '#FBFAFB' }}>
-            <LandingHeader />
+          <LandingHeader />
+          <main className="min-h-screen pt-20" style={{ backgroundColor: '#FBFAFB' }}>
             {children}
             <Footer />
             <Analytics />

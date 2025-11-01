@@ -29,6 +29,9 @@ export function LandingHeader() {
           <span>Suminos</span>
         </Link>
         <div className="inline-flex items-center gap-3">
+          <Link href="/learn" className="px-3 py-2 font-['Roboto_Mono',monospace] text-sm text-[#4b5563] no-underline transition-colors hover:text-[#111827]">
+            Learn
+          </Link>
           <a href="https://app.suminos.ai" className="px-3 py-2 font-['Roboto_Mono',monospace] text-sm text-[#4b5563] no-underline transition-colors hover:text-[#111827]">
             Sign In
           </a>
