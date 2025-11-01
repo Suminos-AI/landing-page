@@ -127,9 +127,11 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     
     // Mix colors based on wave pattern - creates flowing blue/purple waves
     vec3 gradientColor = mix(uColor2, uColor, gradientFactor);
+    float lineVisibility = clamp((1.0 - line_strength) * 2.0, 0.0, 1.0);
     
     // Keep full color saturation - only use alpha to control visibility
-    fragColor = vec4(gradientColor, colorVal);
+    fragColor = vec4(gradientColor * lineVisibility, colorVal);
+
 }
 
 void main() {
