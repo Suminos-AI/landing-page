@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { formatDate } from 'app/news/utils'
 import { getNewsPosts } from 'app/news/utils'
-import { getArticles } from 'app/articles/utils'
+import { getLearnArticles } from 'app/learn/utils'
 
 export function BlogPosts() {
   let allNews = getNewsPosts()
-  let allArticles = getArticles()
+  let allArticles = getLearnArticles()
   let allPosts = [...allNews, ...allArticles]
 
   return (
@@ -21,7 +21,7 @@ export function BlogPosts() {
         })
         .map((post) => {
           const isNews = allNews.includes(post)
-          const href = isNews ? `/news/${post.slug}` : `/articles/${post.slug}`
+          const href = isNews ? `/news/${post.slug}` : `/learn/${post.slug}`
           return (
             <Link
               key={post.slug}
@@ -40,7 +40,7 @@ export function BlogPosts() {
                     ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200' 
                     : 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
                 }`}>
-                  {isNews ? 'News' : 'Article'}
+                  {isNews ? 'News' : 'Learn'}
                 </span>
               </div>
             </Link>

@@ -1,5 +1,4 @@
 import { getNewsPosts } from 'app/news/utils'
-import { getArticles } from 'app/articles/utils'
 import { getLearnArticles } from 'app/learn/utils'
 
 export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://suminos.ai'
@@ -12,13 +11,6 @@ export default async function sitemap() {
     lastModified: post.metadata.publishedAt,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
-  }))
-
-  let articles = getArticles().map((post) => ({
-    url: `${baseUrl}/articles/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
   }))
 
   let learnArticles = getLearnArticles().map((post) => ({
@@ -40,5 +32,5 @@ export default async function sitemap() {
     priority: route.priority,
   }))
 
-  return [...routes, ...learnArticles, ...articles, ...news]
+  return [...routes, ...learnArticles, ...news]
 }

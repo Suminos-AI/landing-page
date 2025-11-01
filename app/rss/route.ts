@@ -1,12 +1,12 @@
 import { baseUrl } from 'app/sitemap'
 import { getNewsPosts } from 'app/news/utils'
-import { getArticles } from 'app/articles/utils'
+import {getLearnArticles } from 'app/learn/utils'
 
 export const dynamic = 'force-static'
 
 export async function GET() {
   let allNews = await getNewsPosts()
-  let allArticles = await getArticles()
+  let allArticles = await getLearnArticles()
   let allPosts = [...allNews, ...allArticles]
 
   const itemsXml = allPosts
