@@ -116,7 +116,7 @@ export default function Page() {
             }}
             className="rounded-lg border-none cursor-pointer bg-[#0060F3] px-10 py-4 text-base text-white font-medium transition-all duration-300 hover:bg-[#1d4ed8] hover:translate-y-[-2px] hover:shadow-[0_10px_25px_rgba(37,99,235,0.2)]"
           >
-            Find my next path
+            Start your journey
           </button>
         </div>
       </section>
