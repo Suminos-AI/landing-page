@@ -37,7 +37,7 @@ export default function Page() {
       number: 1,
       title: 'AI-Powered Resume Revision',
       description:
-        'Turn your resume into a story that stands out. Your AI career partner reviews every detail, highlights what recruiters care about, and helps you tailor it to the roles you want — all with practical, human-sounding feedback.',
+        'Turn your resume into a story that stands out. Your AI career partner reviews every detail, highlights exactly what recruiters look for, and helps you customize it for the roles you want. You receive practical, human sounding feedback that actually helps.',
       tags: ['Resume Review', 'Tailored for Roles', 'Job-Title Optimization', 'Actionable Feedback'],
       illustration: <ResumeOptimizationIllustration />,
     },
@@ -45,7 +45,7 @@ export default function Page() {
       number: 2,
       title: 'Smart Job Discovery',
       description:
-        'Stop scrolling endlessly. Let AI find opportunities that actually fit you — by understanding your experience, goals, and preferences. Get daily job recommendations curated just for you, so you can focus on applying, not searching.',
+        'Stop scrolling forever. Let AI find the opportunities that truly fit you. It understands your experience, goals, and preferences deeply. Get fresh job recommendations tailored just for you every day, so you can focus on applying, not searching.',
       tags: ['Personalized Job Matches', 'Daily Alerts', 'AI-Powered Recommendations', 'Relevant Openings'],
       illustration: <SmartJobDiscoveryIllustration />,
     },
@@ -53,7 +53,7 @@ export default function Page() {
       number: 3,
       title: 'Browser Companion',
       description:
-        'Tired of filling out the same forms? Your AI companion helps you apply faster — auto-filling applications under your supervision, so you stay in control while saving hours every week.',
+        'Tired of filling out the same forms over and over? Your AI companion helps you apply faster. It auto fills applications quickly, but you always stay in control, saving you valuable hours every week.',
       tags: ['Auto-Fill Applications', 'Workflow Automation', 'AI Under Your Control', 'Time Saver'],
       illustration: <JobApplicationIllustration />,
     },
@@ -61,7 +61,7 @@ export default function Page() {
       number: 4,
       title: 'Application Management',
       description:
-        'Keep everything in one place — from resumes you\'ve sent to interviews ahead. Track progress, set gentle reminders, and stay organized throughout your job hunt with a clear, easy dashboard.',
+        'Keep track of everything in one easy spot. Track the resumes you have sent, the interviews you have scheduled, and monitor your progress. Set gentle reminders and stay perfectly organized throughout your job hunt with a clear, stress free dashboard.',
       tags: ['Centralized Tracker', 'Status Updates', 'Reminders & Follow-Ups', 'Stay Organized'],
       illustration: <ProgressTrackingIllustration />,
     },
@@ -69,7 +69,7 @@ export default function Page() {
       number: 5,
       title: 'Interview Preparation',
       description:
-        'Walk into every interview ready. Practice with AI-generated questions, get insights on each company, and receive personalized prep tips — so you can feel confident and make your best impression.',
+        'Walk into every interview feeling completely ready. Practice with realistic AI generated questions, get deep insights on each company, and receive personalized prep tips. This ensures you feel confident and make your best possible impression.',
       tags: ['Practice Questions', 'Company Insights', 'Personalized Prep', 'Confidence Builder'],
       illustration: <InterviewMasteryIllustration />,
     },
