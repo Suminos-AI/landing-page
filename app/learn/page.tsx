@@ -47,19 +47,19 @@ export default function LearnPage() {
   const articles = getLearnArticles()
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#FBFAFB' }}>
+    <div className="min-h-screen bg-[#FBFAFB] dark:bg-[#0f172a]">
       {/* Simple Hero Section */}
-      <section className="px-[60px] pt-[100px] pb-[80px] max-md:px-[30px] text-center" style={{ backgroundColor: '#FBFAFB' }}>
-        <h1 className="mb-4 text-[76px] leading-[101px] tracking-[-1.72px] letter-spacing-[-0.2em] text-black font-normal max-md:text-5xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
+      <section className="px-[60px] pt-[100px] pb-[80px] max-md:px-[30px] text-center bg-[#FBFAFB] dark:bg-[#0f172a]">
+        <h1 className="mb-4 text-[76px] leading-[101px] tracking-[-1.72px] letter-spacing-[-0.2em] text-black dark:text-white font-normal max-md:text-5xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
           Learn & Resources
         </h1>
-        <p className="text-lg font-normal text-black max-w-2xl mx-auto">
+        <p className="text-lg font-normal text-black dark:text-slate-200 max-w-2xl mx-auto">
           Expert insights and guides to help you succeed in your job search journey
         </p>
       </section>
 
       {/* Articles Grid */}
-      <section className="px-[60px] pb-[80px] max-md:px-[30px]" style={{ backgroundColor: '#FBFAFB' }}>
+      <section className="px-[60px] pb-[80px] max-md:px-[30px] bg-[#FBFAFB] dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles

@@ -20,7 +20,7 @@ export function LandingHero({ headline, subheadline, ctaText, onCtaClick }: Land
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-10 pb-20 before:absolute before:bottom-[-50%] before:left-[-10%] before:h-full before:w-[80%] before:rounded-full before:bg-gradient-to-br before:from-[rgba(59,130,246,0.03)] before:to-transparent before:animate-float-hero after:absolute after:top-[-30%] after:right-[-10%] after:h-[80%] after:w-[70%] after:rounded-full after:bg-gradient-to-bl after:from-[rgba(147,197,253,0.03)] after:to-transparent after:animate-float-hero-reverse" style={{ backgroundColor: '#FBFAFB' }}>
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-10 pb-20 bg-[#FBFAFB] dark:bg-[#0f172a] before:absolute before:bottom-[-50%] before:left-[-10%] before:h-full before:w-[80%] before:rounded-full before:bg-gradient-to-br before:from-[rgba(59,130,246,0.03)] dark:before:from-[rgba(59,130,246,0.1)] before:to-transparent before:animate-float-hero after:absolute after:top-[-30%] after:right-[-10%] after:h-[80%] after:w-[70%] after:rounded-full after:bg-gradient-to-bl after:from-[rgba(147,197,253,0.03)] dark:after:from-[rgba(147,197,253,0.1)] after:to-transparent after:animate-float-hero-reverse">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Threads 
           color={[0.2, 0.4, 1.0]} 
@@ -32,10 +32,10 @@ export function LandingHero({ headline, subheadline, ctaText, onCtaClick }: Land
         />
       </div>
       <div className="relative z-10 max-w-[1000px] text-center">
-        <h1 className="mb-8 text-[76px] leading-[101px] tracking-[-1.72px] letter-spacing-[-0.2em] text-black font-normal animate-fade-in-up max-md:text-5xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
+        <h1 className="mb-8 text-[76px] leading-[101px] tracking-[-1.72px] letter-spacing-[-0.2em] text-black dark:text-white font-normal animate-fade-in-up max-md:text-5xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
           {headline}
         </h1>
-        <p className="mb-12 text-lg font-normal text-black animate-fade-in-up-delay-1">
+        <p className="mb-12 text-lg font-normal text-black dark:text-slate-200 animate-fade-in-up-delay-1">
           {subheadline}
         </p>
         <button

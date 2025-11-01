@@ -122,12 +122,12 @@ export default async function LearnArticleDetail({ params }) {
   const ctaContent = getCTAContent(article.metadata.category, article.metadata.linkTarget)
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#FBFAFB', fontFamily: "var(--font-merriweather), 'Merriweather', Georgia, serif" }}>
+    <div className="min-h-screen bg-[#FBFAFB] dark:bg-[#0f172a]" style={{ fontFamily: "var(--font-merriweather), 'Merriweather', Georgia, serif" }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Back Button */}
         <Link 
           href="/learn" 
-          className="inline-flex items-center text-[#6b7280] hover:text-[#111827] mb-8 transition-colors duration-200"
+          className="inline-flex items-center text-[#6b7280] dark:text-slate-400 hover:text-[#111827] dark:hover:text-white mb-8 transition-colors duration-200"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -176,7 +176,7 @@ export default async function LearnArticleDetail({ params }) {
           }}
         />
 
-        <article className="bg-white rounded-lg shadow-lg overflow-hidden border border-[#e0e0e0]">
+        <article className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden border border-[#e0e0e0] dark:border-slate-700">
           {/* Featured Image */}
           {article.metadata.image && (
             <div className="aspect-video relative">
@@ -199,33 +199,33 @@ export default async function LearnArticleDetail({ params }) {
                   </span>
                 )}
                 {article.metadata.funnelStage && (
-                  <span className="bg-[#f3f4f6] text-[#6b7280] text-xs font-medium px-2 py-1 rounded-full">
+                  <span className="bg-[#f3f4f6] dark:bg-slate-700 text-[#6b7280] dark:text-slate-300 text-xs font-medium px-2 py-1 rounded-full">
                     {article.metadata.funnelStage}
                   </span>
                 )}
-                <span className="text-[#6b7280] text-sm">
+                <span className="text-[#6b7280] dark:text-slate-400 text-sm">
                   {formatDate(article.metadata.publishedAt)}
                 </span>
                 {article.metadata.readTime && (
-                  <span className="text-[#6b7280] text-sm">
+                  <span className="text-[#6b7280] dark:text-slate-400 text-sm">
                     {article.metadata.readTime}
                   </span>
                 )}
               </div>
               {article.metadata.author && (
-                <span className="text-[#6b7280] text-sm">
+                <span className="text-[#6b7280] dark:text-slate-400 text-sm">
                   By {article.metadata.author}
                 </span>
               )}
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+            <h1 className="text-4xl font-bold text-[#1a1a1a] dark:text-white mb-6 leading-tight">
               {article.metadata.title}
             </h1>
 
             {/* Summary */}
-            <p className="text-lg text-[#4b5563] mb-8 leading-relaxed">
+            <p className="text-lg text-[#4b5563] dark:text-slate-300 mb-8 leading-relaxed">
               {article.metadata.summary}
             </p>
 
@@ -235,7 +235,7 @@ export default async function LearnArticleDetail({ params }) {
                 {article.metadata.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-[#f3f4f6] text-[#6b7280] text-sm px-3 py-1 rounded-full"
+                    className="bg-[#f3f4f6] dark:bg-slate-700 text-[#6b7280] dark:text-slate-300 text-sm px-3 py-1 rounded-full"
                   >
                     #{tag}
                   </span>
@@ -245,7 +245,7 @@ export default async function LearnArticleDetail({ params }) {
 
             {/* Content */}
             <div 
-              className="prose prose-slate max-w-none mb-12 prose-lg prose-headings:font-semibold prose-p:leading-relaxed prose-p:text-[#1a1a1a] prose-p:text-base prose-p:mb-6 prose-headings:text-[#1a1a1a] prose-headings:mb-4 prose-headings:mt-8 prose-a:text-[#0060F3] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#1a1a1a] prose-strong:font-semibold prose-ul:text-base prose-ol:text-base prose-li:text-[#1a1a1a] prose-li:mb-2 prose-blockquote:border-l-[#0060F3] prose-blockquote:border-l-4 prose-blockquote:pl-6 prose-blockquote:pr-4 prose-blockquote:py-4 prose-blockquote:my-6 prose-blockquote:bg-[#f9fafb] prose-blockquote:not-italic prose-blockquote:text-[#1a1a1a] prose-blockquote:text-base prose-code:text-sm prose-code:bg-[#f3f4f6] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-[#1a1a1a] prose-pre:text-white"
+              className="prose prose-slate dark:prose-invert max-w-none mb-12 prose-lg prose-headings:font-semibold prose-p:leading-relaxed prose-p:text-[#1a1a1a] dark:prose-p:text-slate-200 prose-p:text-base prose-p:mb-6 prose-headings:text-[#1a1a1a] dark:prose-headings:text-white prose-headings:mb-4 prose-headings:mt-8 prose-a:text-[#0060F3] dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-[#1a1a1a] dark:prose-strong:text-slate-200 prose-strong:font-semibold prose-ul:text-base prose-ol:text-base prose-li:text-[#1a1a1a] dark:prose-li:text-slate-300 prose-li:mb-2 prose-blockquote:border-l-[#0060F3] dark:prose-blockquote:border-l-blue-500 prose-blockquote:border-l-4 prose-blockquote:pl-6 prose-blockquote:pr-4 prose-blockquote:py-4 prose-blockquote:my-6 prose-blockquote:bg-[#f9fafb] dark:prose-blockquote:bg-slate-900 prose-blockquote:not-italic prose-blockquote:text-[#1a1a1a] dark:prose-blockquote:text-slate-200 prose-blockquote:text-base prose-code:text-sm prose-code:bg-[#f3f4f6] dark:prose-code:bg-slate-700 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-[#1a1a1a] dark:prose-code:text-slate-200 prose-pre:bg-[#1a1a1a] dark:prose-pre:bg-slate-900 prose-pre:text-white dark:prose-pre:text-slate-200"
               style={{ fontFamily: "var(--font-merriweather), 'Merriweather', Georgia, serif" }}
             >
               <CustomMDX source={article.content} />
@@ -253,11 +253,11 @@ export default async function LearnArticleDetail({ params }) {
 
             {/* CTA Section */}
             {ctaContent && (
-              <div className="mt-12 pt-8 border-t border-[#e0e0e0]">
-                <h3 className="text-lg font-medium text-[#1a1a1a] mb-2">
+              <div className="mt-12 pt-8 border-t border-[#e0e0e0] dark:border-slate-700">
+                <h3 className="text-lg font-medium text-[#1a1a1a] dark:text-white mb-2">
                   {ctaContent.title}
                 </h3>
-                <p className="text-[#6b7280] text-sm mb-4">
+                <p className="text-[#6b7280] dark:text-slate-400 text-sm mb-4">
                   {ctaContent.description}
                 </p>
                 <Link

@@ -33,7 +33,7 @@ export function NewsCard({ post }: NewsCardProps) {
           />
           {post.metadata.category && (
             <div className="absolute top-3 left-3">
-              <span className="bg-[#1a1a1a] text-white text-xs font-medium px-2 py-1 rounded-full">
+              <span className="bg-[#1a1a1a] dark:bg-slate-800 text-white dark:text-slate-200 text-xs font-medium px-2 py-1 rounded-full">
                 {post.metadata.category}
               </span>
             </div>
@@ -45,7 +45,7 @@ export function NewsCard({ post }: NewsCardProps) {
         {/* Category badge - show at top if no image */}
         {!post.metadata.image && post.metadata.category && (
           <div className="mb-3">
-            <span className="bg-[#1a1a1a] text-white text-xs font-medium px-2 py-1 rounded-full">
+            <span className="bg-[#1a1a1a] dark:bg-slate-800 text-white dark:text-slate-200 text-xs font-medium px-2 py-1 rounded-full">
               {post.metadata.category}
             </span>
           </div>

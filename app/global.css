@@ -81,6 +81,17 @@
   font-weight: 600;
 }
 
+@media (prefers-color-scheme: dark) {
+  .prose table th,
+  .prose table td {
+    border-color: #374151;
+  }
+
+  .prose table th {
+    background: #1f2937;
+  }
+}
+
 .dark .prose table th,
 .dark .prose table td {
   border-color: #374151;
@@ -212,6 +223,13 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f172a;
+    color: #f1f5f9;
+  }
 }
 
 h1, h2 {

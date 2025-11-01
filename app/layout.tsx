@@ -100,20 +100,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={cx(
-        'text-black dark:text-white dark:bg-black',
-        inter.variable,
-        robotoMono.variable,
-        merriweather.variable
-      )}
-      style={{ backgroundColor: '#FBFAFB' }}
-    >
-      <body className="antialiased" style={{ fontFamily: `var(${defaultFontVariable}), ${defaultFontFamily}`, backgroundColor: '#FBFAFB' }}>
+      <html
+        lang="en"
+        className={cx(
+          'text-black dark:text-white',
+          inter.variable,
+          robotoMono.variable,
+          merriweather.variable
+        )}
+      >
+        <body className="antialiased bg-[#FBFAFB] dark:bg-[#0f172a]" style={{ fontFamily: `var(${defaultFontVariable}), ${defaultFontFamily}` }}>
         <PostHogProvider>
           <LandingHeader />
-          <main className="min-h-screen pt-20" style={{ backgroundColor: '#FBFAFB' }}>
+          <main className="min-h-screen pt-20 bg-[#FBFAFB] dark:bg-[#0f172a]">
             {children}
             <Footer />
             <Analytics />

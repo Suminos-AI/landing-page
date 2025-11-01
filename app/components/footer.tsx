@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="w-full h-[100px] border-t border-gray-100 text-gray-500 dark:border-gray-800 dark:bg-[#0D1117] dark:text-gray-400 flex items-center transition-colors duration-700" style={{ paddingTop: '20px', paddingBottom: '20px', paddingLeft: '50px', paddingRight: '50px', backgroundColor: '#FBFAFB' }}>
+    <footer className="w-full h-[100px] border-t border-gray-100 dark:border-slate-800 bg-[#FBFAFB] dark:bg-[#0f172a] text-gray-500 dark:text-slate-400 flex items-center transition-colors duration-700" style={{ paddingTop: '20px', paddingBottom: '20px', paddingLeft: '50px', paddingRight: '50px' }}>
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 text-[14px] leading-relaxed">
         <p className="text-left">
           © {new Date().getFullYear()} <span className="text-gray-900 dark:text-white font-medium">Suminos</span>. Empowering your career journey with AI.

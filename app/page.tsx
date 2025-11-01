@@ -76,7 +76,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#FBFAFB' }}>
+    <div className="min-h-screen bg-[#FBFAFB] dark:bg-[#0f172a]">
       <LandingHero
         headline={
           <>
@@ -105,9 +105,9 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-[60px] pb-[80px] max-md:px-[30px] flex items-center justify-center" style={{ backgroundColor: '#FBFAFB' }}>
+      <section className="px-[60px] pb-[80px] max-md:px-[30px] flex items-center justify-center bg-[#FBFAFB] dark:bg-[#0f172a]">
         <div className="text-center max-w-[600px]">
-          <h2 className="mb-4 text-[32px] font-semibold text-[#1a1a1a] max-md:text-2xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
+          <h2 className="mb-4 text-[32px] font-semibold text-[#1a1a1a] dark:text-white max-md:text-2xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
             Ready to get started?
           </h2>
           <button

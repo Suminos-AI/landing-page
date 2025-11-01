@@ -35,7 +35,7 @@ export function ArticleCard({ article, basePath = '/learn' }: ArticleCardProps &
           />
           {article.metadata.category && (
             <div className="absolute top-3 left-3">
-              <span className="bg-[#1a1a1a] text-white text-xs font-medium px-2 py-1 rounded-full">
+              <span className="bg-[#1a1a1a] dark:bg-slate-800 text-white dark:text-slate-200 text-xs font-medium px-2 py-1 rounded-full">
                 {article.metadata.category}
               </span>
             </div>
@@ -47,7 +47,7 @@ export function ArticleCard({ article, basePath = '/learn' }: ArticleCardProps &
         {/* Category badge - show at top if no image */}
         {!article.metadata.image && article.metadata.category && (
           <div className="mb-3">
-            <span className="bg-[#1a1a1a] text-white text-xs font-medium px-2 py-1 rounded-full">
+            <span className="bg-[#1a1a1a] dark:bg-slate-800 text-white dark:text-slate-200 text-xs font-medium px-2 py-1 rounded-full">
               {article.metadata.category}
             </span>
           </div>
@@ -74,13 +74,13 @@ export function ArticleCard({ article, basePath = '/learn' }: ArticleCardProps &
             {article.metadata.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="bg-[#f3f4f6] text-[#6b7280] text-xs px-2 py-1 rounded"
+                className="bg-[#f3f4f6] dark:bg-slate-700 text-[#6b7280] dark:text-slate-300 text-xs px-2 py-1 rounded"
               >
                 #{tag}
               </span>
             ))}
             {article.metadata.tags.length > 3 && (
-              <span className="text-[#9ca3af] text-xs">
+              <span className="text-[#9ca3af] dark:text-slate-400 text-xs">
                 +{article.metadata.tags.length - 3} more
               </span>
             )}
