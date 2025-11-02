@@ -32,7 +32,7 @@ export function LandingHero({ headline, subheadline, ctaText, onCtaClick }: Land
         />
       </div>
       <div className="relative z-10 max-w-[1000px] text-center">
-        <h1 className="mb-8 text-[76px] leading-[101px] tracking-[-1.72px] letter-spacing-[-0.2em] text-black dark:text-white font-normal animate-fade-in-up max-md:text-5xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
+        <h1 className="mb-8 text-[76px] leading-[101px] tracking-[-1.72px] letter-spacing-[-0.2em] text-black dark:text-white font-normal animate-fade-in-up max-md:text-5xl max-sm:text-4xl" style={{ fontFamily: "'BIZ UDP Mincho', serif" }}>
           {headline}
         </h1>
         <p className="mb-12 text-lg font-normal text-black dark:text-slate-200 animate-fade-in-up-delay-1">
